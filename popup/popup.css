@@ -1,0 +1,293 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 350px;
+    min-height: 500px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+}
+
+.container {
+    background: white;
+    margin: 8px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+header p {
+    opacity: 0.9;
+    font-size: 0.9em;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+.editor-section, .current-tab, .actions, .presets-section {
+    margin-bottom: 20px;
+}
+
+.editor-section h3, .current-tab h3, .presets-section h3 {
+    color: #4a5568;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+/* Current Tab Preview */
+.tab-preview {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    background: #f7fafc;
+    border-radius: 8px;
+    border: 2px solid #e2e8f0;
+}
+
+.favicon-preview {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+}
+
+/* Form Elements */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #4a5568;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.2s ease;
+    margin-bottom: 12px;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Buttons */
+.btn-primary, .btn-secondary, .btn-tertiary {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.btn-secondary {
+    background: #f7fafc;
+    color: #4a5568;
+    border: 2px solid #e2e8f0;
+    margin-right: 8px;
+}
+
+.btn-secondary:hover {
+    background: #edf2f7;
+    border-color: #cbd5e0;
+}
+
+.btn-tertiary {
+    background: #48bb78;
+    color: white;
+}
+
+.btn-tertiary:hover {
+    background: #38a169;
+    transform: translateY(-1px);
+}
+
+/* Favicon Grid */
+.favicon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.favicon-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 8px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #f7fafc;
+}
+
+.favicon-option:hover {
+    border-color: #667eea;
+    background: #edf2f7;
+    transform: translateY(-2px);
+}
+
+.favicon-option.selected {
+    border-color: #667eea;
+    background: #e6fffa;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.favicon-option img {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 6px;
+}
+
+.emoji-favicon {
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+.favicon-option span {
+    font-size: 12px;
+    color: #4a5568;
+    text-align: center;
+}
+
+/* Actions Section */
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+/* Presets */
+.presets-list {
+    max-height: 120px;
+    overflow-y: auto;
+}
+
+.preset-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #f7fafc;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.preset-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+}
+
+.preset-actions {
+    display: flex;
+    gap: 4px;
+}
+
+.preset-btn {
+    padding: 4px 8px;
+    font-size: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.preset-apply {
+    background: #667eea;
+    color: white;
+}
+
+.preset-delete {
+    background: #fed7d7;
+    color: #c53030;
+}
+
+.preset-apply:hover {
+    background: #5a67d8;
+}
+
+.preset-delete:hover {
+    background: #feb2b2;
+}
+
+.no-presets {
+    text-align: center;
+    color: #a0aec0;
+    font-style: italic;
+    padding: 20px;
+}
+
+/* Scrollbar Styling */
+.presets-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.presets-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.presets-list::-webkit-scrollbar-thumb {
+    background: #cbd5e0;
+    border-radius: 3px;
+}
+
+.presets-list::-webkit-scrollbar-thumb:hover {
+    background: #a0aec0;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    body {
+        width: 300px;
+    }
+    
+    .favicon-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
